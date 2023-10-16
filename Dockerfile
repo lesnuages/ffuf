@@ -5,4 +5,4 @@ RUN CGO_ENABLED=0 go build .
 
 FROM scratch
 COPY --from=builder /go/src/ffuf/ffuf /bin/ffuf
-CMD ["/bin/ffuf"]
+ENTRYPOINT ["/bin/ffuf"]
